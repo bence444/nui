@@ -8,5 +8,19 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "description": "Easy to customize Angular components with tailwindcss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bence444/nui.git"
+  },
+  "author": "Bence Lovász",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bence444/nui/issues"
+  },
+  "homepage": "https://github.com/bence444/nui#readme"
 }
