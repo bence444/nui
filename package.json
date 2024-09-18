@@ -1,13 +1,12 @@
 {
-  "name": "shadcng",
+  "name": "nui",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "g:c": "ng g c --project components --prefix nui --change-detection OnPush"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
