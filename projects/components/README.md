@@ -1,24 +1,47 @@
-# Components
+# Nui Components
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+## Important Note: This package is currently a concept.
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project components` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project components`.
-> Note: Don't forget to add `--project components` or else it will be added to the default project in your `angular.json` file. 
+To get started, please install Tailwind CSS by running the following commands:
+```bash
+$ npm install tailwindcss postcss autoprefixer --save-dev
+$ npx tailwindcss init
+```
 
-## Build
+Next, install Angular CDK:
+```bash
+$ npm install @angular/cdk
+```
 
-Run `ng build components` to build the project. The build artifacts will be stored in the `dist/` directory.
+Finally, install NuiComponents:
+```bash
+$ npm install nui-components
+```
 
-## Publishing
+## Usage
 
-After building your library with `ng build components`, go to the dist folder `cd dist/components` and run `npm publish`.
+In your `styles.css`, you can apply the components you want to use in your project with the `@use` directive. For example:
+```css
+@use 'nui-components/src/assets/button.component';
 
-## Running unit tests
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
-Run `ng test components` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Customizing Components
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+You can customize the components by applying any Tailwind class using `@apply`, or by writing standard CSS. For example:
+```css
+._n_button-rounded-auto {
+  @apply rounded-none;
+}
+```
+Alternatively:
+```css
+._n_button-rounded-auto {
+  border-radius: 0;
+}
+```
