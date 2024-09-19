@@ -3,6 +3,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   input,
+  isDevMode,
   ViewEncapsulation
 } from '@angular/core';
 
@@ -16,11 +17,17 @@ import {
   DEFAULT_COMPONENT_SIZE
 } from '../_interfaces';
 
+const styles = [];
+
+if (!isDevMode()) {
+  styles.push('./button.components.scss');
+}
+
 @Component({
   selector: 'a[nui-button], button[nui-button], span[nui-button]',
   standalone: true,
   template: '<ng-content />',
-  styleUrl: './button.component.scss',
+  styleUrls: styles,
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   host: {

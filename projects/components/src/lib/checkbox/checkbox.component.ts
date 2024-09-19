@@ -13,6 +13,7 @@ import {
   HostListener,
   inject,
   input,
+  isDevMode,
   OnChanges,
   OnDestroy,
   OnInit,
@@ -51,12 +52,18 @@ export interface CheckboxChanged {
 
 export type CheckboxLabelPosition = 'before' | 'after';
 
+const styles = [];
+
+if (isDevMode()) {
+  styles.push('./checkbox.component.scss');
+}
+
 @Component({
   selector: 'nui-checkbox',
   standalone: true,
   imports: [],
   templateUrl: './checkbox.component.html',
-  styleUrl: './checkbox.component.scss',
+  styleUrls: styles,
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   providers: [

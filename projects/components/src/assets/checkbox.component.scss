@@ -1,0 +1,22 @@
+._n_checkbox { @apply items-center gap-2 select-none; }
+
+._n_checkbox-reverse { @apply flex-row-reverse; }
+
+._n_checkbox-display-auto { @apply inline-flex w-fit; }
+._n_checkbox-display-block { @apply flex w-full; }
+
+._n_checkbox-size-small { @apply w-4 h-4 rounded-md; }
+._n_checkbox-size-medium { @apply w-5 h-5 rounded-md; }
+._n_checkbox-size-large { @apply w-6 h-6 rounded-lg; }
+
+._n_checkbox-container { @apply border-2; }
+
+._n_checkbox-default {
+  @apply bg-neutral-700 dark:bg-neutral-300
+  border-neutral-700 dark:border-neutral-300;
+}
+
+._n_checkbox-blue {
+  @apply bg-blue-700 dark:bg-blue-600
+  border-blue-700 dark:border-blue-600;
+}
