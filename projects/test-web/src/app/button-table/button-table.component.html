@@ -1,0 +1,28 @@
+<div class="flex flex-auto gap-2 justify-center items-center px-8 py-4 rounded-lg">
+  <button nui-button color="blue" size="small">Small</button>
+  <button nui-button color="blue" size="medium">Medium</button>
+  <button nui-button color="blue" size="large">Large</button>
+</div>
+
+<div class="flex flex-auto gap-2 justify-center items-center px-8 py-4 rounded-lg">
+  <button nui-button color="blue" [rounded]="true">Full rounded</button>
+
+  <div class="w-72">
+    <button nui-button color="blue" [rounded]="true" display="block">Full rounded max width</button>
+  </div>
+
+  <button nui-button color="blue" [disabled]="true">Disabled</button>
+</div>
+
+<div class="flex flex-wrap flex-auto gap-2 justify-center items-center px-8 py-4 rounded-lg">
+  @for (color of colors; track $index) {
+    <button nui-button [color]="color">Sign in</button>
+  }
+</div>
+
+<div class="flex flex-auto gap-2 justify-center items-center px-8 py-4 rounded-lg">
+  <button nui-button color="red">
+    <mat-icon>delete</mat-icon>
+    Remove account
+  </button>
+</div>

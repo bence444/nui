@@ -1,0 +1,27 @@
+<div class="flex flex-auto gap-6 justify-center items-center px-8 py-4 rounded-lg">
+  <nui-checkbox size="small">
+    Remember me
+  </nui-checkbox>
+
+  <nui-checkbox size="medium">
+    Remember me
+  </nui-checkbox>
+  
+  <nui-checkbox size="large">
+    Remember me
+  </nui-checkbox>
+</div>
+
+<div class="flex flex-wrap flex-auto gap-6 justify-center items-center px-8 py-4 rounded-lg">
+  @for (color of colors; track $index) {
+    <nui-checkbox [color]="color">
+      Remember me
+    </nui-checkbox>
+  }
+</div>
+
+<div class="flex flex-wrap flex-auto justify-center items-center px-8 py-4 rounded-lg">
+  <nui-checkbox [disabled]="true">
+    Disabled checkbox
+  </nui-checkbox>
+</div>
