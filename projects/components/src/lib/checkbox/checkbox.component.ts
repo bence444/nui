@@ -78,6 +78,7 @@ if (isDevMode()) {
     '[class._n_checkbox-display-auto]': 'display() === "auto"',
     '[class._n_checkbox-display-block]': 'display() === "block"',
     '[class._n_checkbox-reverse]': 'labelPosition() === "before"',
+    '[class.hover:cursor-pointer]': '!isDisabled',
     '(click)': 'clickToggle()'
   }
 })

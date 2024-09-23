@@ -3,7 +3,7 @@
 ._n_checkbox-reverse { @apply flex-row-reverse; }
 
 ._n_checkbox-display-auto { @apply inline-flex w-fit; }
-._n_checkbox-display-block { @apply flex w-full; }
+._n_checkbox-display-block { @apply flex w-full justify-between; }
 
 ._n_checkbox-size-small { @apply w-4 h-4 rounded-md; }
 ._n_checkbox-size-medium { @apply w-5 h-5 rounded-md; }
@@ -18,8 +18,6 @@
 }
 
 ._n_checkbox-container:not(._n_checkbox-disabled) {
-  & { @apply hover:cursor-pointer; }
-
   &._n_checkbox-default {
     @apply bg-neutral-700 dark:bg-neutral-300
     border-neutral-700 dark:border-neutral-300;
