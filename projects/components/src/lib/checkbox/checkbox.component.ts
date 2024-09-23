@@ -235,6 +235,7 @@ export class NuiCheckboxComponent implements
     });
   }
 
+  // TODO: use key manager
   @HostListener('keydown', [ '$event' ])
   private _keyDown(event: KeyboardEvent) {
     if (this.isDisabled) {
