@@ -78,6 +78,7 @@ if (isDevMode()) {
     '[class._n_checkbox-display-auto]': 'display() === "auto"',
     '[class._n_checkbox-display-block]': 'display() === "block"',
     '[class._n_checkbox-reverse]': 'labelPosition() === "before"',
+    '[class.hover:cursor-pointer]': '!isDisabled',
     '(click)': 'clickToggle()'
   }
 })
@@ -133,9 +134,9 @@ export class NuiCheckboxComponent implements
     return this._value;
   }
   
-  private _isDisabled = this.disabled();
+  private _isDisabled?: boolean;
   get isDisabled() {
-    return this._isDisabled;
+    return this._isDisabled ?? this.disabled();
   }
 
   /**
@@ -204,8 +205,6 @@ export class NuiCheckboxComponent implements
   validatorChangeFn = () => {};
 
   clickToggle() {
-    console.log('toggle');
-
     if (this.isDisabled) {
       return;
     }
@@ -225,8 +224,6 @@ export class NuiCheckboxComponent implements
     this._value = obj;
     this._cdRef.detectChanges();
 
-    console.log(this.value);
-
     if (emit) {
       this._emitChanges();
     }
@@ -239,6 +236,7 @@ export class NuiCheckboxComponent implements
     });
   }
 
+  // TODO: use key manager
   @HostListener('keydown', [ '$event' ])
   private _keyDown(event: KeyboardEvent) {
     if (this.isDisabled) {

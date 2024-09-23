@@ -1,0 +1,43 @@
+<div class="flex flex-auto gap-6 justify-center items-center px-8 py-4 rounded-lg">
+  <nui-checkbox size="small">
+    Remember me
+  </nui-checkbox>
+
+  <nui-checkbox size="medium">
+    Remember me
+  </nui-checkbox>
+  
+  <nui-checkbox size="large">
+    Remember me
+  </nui-checkbox>
+</div>
+
+<div class="flex flex-wrap flex-auto gap-6 justify-center items-center px-8 py-4 rounded-lg">
+  @for (color of colors; track $index) {
+    <nui-checkbox [color]="color">
+      Remember me
+    </nui-checkbox>
+  }
+</div>
+
+<div class="flex flex-wrap flex-auto justify-center items-center gap-4 px-8 py-4 rounded-lg">
+  <nui-checkbox [disabled]="true">
+    Disabled checkbox
+  </nui-checkbox>
+
+  <nui-checkbox [disabled]="true" [labelPosition]="'before'">
+    Disabled checkbox before
+  </nui-checkbox>
+</div>
+
+<div class="flex flex-wrap flex-auto justify-center items-center w-96 p-4 rounded-lg mx-auto border border-red-400">
+  <nui-checkbox [display]="'block'">
+    Block display checkbox
+  </nui-checkbox>
+</div>
+
+<div class="flex flex-wrap flex-auto justify-center items-center w-96 p-4 rounded-lg mx-auto border border-red-400 mt-2">
+  <nui-checkbox [display]="'block'" [labelPosition]="'before'">
+    Block display checkbox
+  </nui-checkbox>
+</div>
