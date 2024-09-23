@@ -1,0 +1,25 @@
+._n_divider { @apply flex justify-center items-center; }
+
+._n_divider-text {
+  @apply flex-grow-0 text-center
+  text-neutral-600 dark:text-neutral-400;
+
+  &:not(:empty) { @apply px-2; }
+}
+
+._n_divider-divider {
+  @apply flex-grow
+  bg-neutral-600 dark:bg-neutral-400;
+}
+
+._n_divider-horizontal {
+  @apply w-full h-min;
+
+  > ._n_divider-divider { @apply w-fit h-px; }
+}
+
+._n_divider-vertical {
+  @apply w-fit flex-col;
+
+  > ._n_divider-divider { @apply w-px h-full; }
+}
