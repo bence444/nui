@@ -45,6 +45,8 @@ if (!isDevMode()) {
     '[class._n_button-green]': 'color() === "green"',
     '[class._n_button-red]': 'color() === "red"',
     '[class._n_button-yellow]': 'color() === "yellow"',
+    '[class._n_button-lime]': 'color() === "lime"',
+    '[class._n_button-azure]': 'color() === "azure"',
     '[class._n_button-disabled]': 'disabled()'
   }
 })
