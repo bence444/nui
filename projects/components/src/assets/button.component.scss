@@ -21,7 +21,7 @@
   bg-neutral-300 dark:bg-neutral-500;
 }
 
-:not(._n_button-disabled) {
+._n_button:not(._n_button-disabled) {
   &._n_button-default {
     @apply bg-neutral-400 dark:bg-neutral-600
     hover:bg-neutral-500 dark:hover:bg-neutral-700
