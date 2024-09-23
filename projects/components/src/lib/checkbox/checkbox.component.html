@@ -1,28 +1,3 @@
-<!-- <div
-  class="flex items-center gap-2 select-none"
-  [class.flex-row-reverse]="labelPosition() === 'before'"
->
-  <div #checkbox
-    class="w-5 h-5 ring-neutral-300 dark:ring-neutral-400 rounded-md shadow-md hover:shadow-sm"
-    [class.ring-0]="value"
-    [class.ring-1]="!value"
-    [class.bg-neutral-600]="value"
-    [class.dark:bg-neutral-100]="value"
-    [class.cursor-pointer]="!isDisabled"
-    [class.cursor-not-allowed]="isDisabled"
-    tabindex="0"
-  >
-    @if (value) {
-      <svg class="w-full h-full p-0.5 fill-white dark:fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-        < !--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-- >
-        <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
-      </svg>
-    }
-  </div>
-  
-  <ng-content />
-</div> -->
-
 <div #checkbox
   class="_n_checkbox-container"
   [class._n_checkbox-size-small]="size() === 'small'"
@@ -30,7 +5,14 @@
   [class._n_checkbox-size-large]="size() === 'large'"
   [class.!bg-transparent]="!value"
   [class._n_checkbox-default]="color() === 'default'"
+  [class._n_checkbox-orange]="color() === 'orange'"
   [class._n_checkbox-blue]="color() === 'blue'"
+  [class._n_checkbox-green]="color() === 'green'"
+  [class._n_checkbox-red]="color() === 'red'"
+  [class._n_checkbox-yellow]="color() === 'yellow'"
+  [class._n_checkbox-lime]="color() === 'lime'"
+  [class._n_checkbox-azure]="color() === 'azure'"
+  [class._n_checkbox-disabled]="disabled()"
 >
   @if (value) {
     <svg class="w-full h-full p-0.5 fill-white dark:fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

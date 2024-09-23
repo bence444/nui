@@ -11,12 +11,53 @@
 
 ._n_checkbox-container { @apply border-2; }
 
-._n_checkbox-default {
-  @apply bg-neutral-700 dark:bg-neutral-300
-  border-neutral-700 dark:border-neutral-300;
+._n_checkbox-disabled {
+  @apply cursor-not-allowed
+  bg-neutral-500 dark:bg-neutral-600
+  border-neutral-500 dark:border-neutral-600;
 }
 
-._n_checkbox-blue {
-  @apply bg-blue-700 dark:bg-blue-600
-  border-blue-700 dark:border-blue-600;
+._n_checkbox-container:not(._n_checkbox-disabled) {
+  & { @apply hover:cursor-pointer; }
+
+  &._n_checkbox-default {
+    @apply bg-neutral-700 dark:bg-neutral-300
+    border-neutral-700 dark:border-neutral-300;
+  }
+  
+  &._n_checkbox-orange {
+    @apply bg-orange-500 dark:bg-orange-600
+    border-orange-500 dark:border-orange-600;
+  }
+  
+  &._n_checkbox-blue {
+    @apply bg-blue-600 dark:bg-blue-700
+    border-blue-600 dark:border-blue-700;
+  }
+  
+  &._n_checkbox-green {
+    @apply bg-green-600 dark:bg-green-700
+    border-green-600 dark:border-green-700;
+  }
+  
+  &._n_checkbox-red {
+    @apply bg-red-500 dark:bg-red-600
+    border-red-500 dark:border-red-600;
+  }
+  
+  &._n_checkbox-yellow {
+    @apply bg-yellow-300 dark:bg-yellow-400
+    border-yellow-300 dark:border-yellow-400;
+  }
+
+  &._n_checkbox-lime {
+    @apply bg-green-400 dark:bg-green-600
+    border-green-400 dark:border-green-600;
+  }
+
+  &._n_checkbox-azure {
+    @apply bg-blue-400 dark:bg-blue-600
+    border-blue-400 dark:border-blue-600;
+  }
 }
+

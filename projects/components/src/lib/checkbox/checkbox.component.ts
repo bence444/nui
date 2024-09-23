@@ -133,9 +133,9 @@ export class NuiCheckboxComponent implements
     return this._value;
   }
   
-  private _isDisabled = this.disabled();
+  private _isDisabled?: boolean;
   get isDisabled() {
-    return this._isDisabled;
+    return this._isDisabled ?? this.disabled();
   }
 
   /**
@@ -204,8 +204,6 @@ export class NuiCheckboxComponent implements
   validatorChangeFn = () => {};
 
   clickToggle() {
-    console.log('toggle');
-
     if (this.isDisabled) {
       return;
     }
@@ -224,8 +222,6 @@ export class NuiCheckboxComponent implements
 
     this._value = obj;
     this._cdRef.detectChanges();
-
-    console.log(this.value);
 
     if (emit) {
       this._emitChanges();
