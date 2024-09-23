@@ -25,7 +25,7 @@ jobs:
       run: node projects/css-reader/extract.js
 
     - name: Build components
-      run: ng build components
+      run: npm run ng build components
 
     - name: Publish to NPM
       run: npm publish
