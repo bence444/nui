@@ -7,3 +7,4 @@ export * from './lib/_interfaces';
 export * from './lib/button';
 export * from './lib/checkbox';
 export * from './lib/divider';
+export * from './lib/form-field';
