@@ -3,9 +3,13 @@
 @import './../../../dist/components/src/assets/button.component';
 @import './../../../dist/components/src/assets/checkbox.component';
 @import './../../../dist/components/src/assets/divider.component';
+@import './../../../dist/components/src/assets/form-field.component';
+@import './../../../dist/components/src/assets/input.directive';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @include mat.core();
 
 $test-web-theme: mat.define-theme((

@@ -6,6 +6,7 @@ import {
 import { ButtonTableComponent } from '../button-table/button-table.component';
 import { CheckboxTableComponent } from '../checkbox-table/checkbox-table.component';
 import { DividerTableComponent } from '../divider-table/divider-table.component';
+import { FormFieldTableComponent } from '../form-field-table/form-field-table.component';
 
 @Component({
   selector: 'app-showcase',
@@ -13,7 +14,8 @@ import { DividerTableComponent } from '../divider-table/divider-table.component'
   imports: [
     ButtonTableComponent,
     CheckboxTableComponent,
-    DividerTableComponent
+    DividerTableComponent,
+    FormFieldTableComponent
   ],
   templateUrl: './showcase.component.html',
   styleUrl: './showcase.component.scss'
